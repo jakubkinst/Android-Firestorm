@@ -1,0 +1,70 @@
+apply plugin: 'com.android.library'
+apply plugin: 'me.tatarka.retrolambda'
+
+// Last Git tag name on current branch
+final GIT_TAG_NAME = 'git describe --tags --abbrev=0'.execute([], project.rootDir).text.trim()
+// Total number of tags in the app
+final GIT_TAG_COUNT = 'git tag --list'.execute([], project.rootDir).text.split("\n").size()
+
+ext {
+	bintrayUser = 'jakubkinst'
+	bintrayRepo = 'cz.kinst.jakub'
+	bintrayName = 'android-firestorm'
+
+	publishedGroupId = 'cz.kinst.jakub'
+	libraryName = 'Android-Firestorm'
+	artifact = 'firestorm'
+
+	libraryDescription = 'Firebase Realtime Database connected with Android Data Binding'
+
+	siteUrl = 'https://github.com/jakubkinst/Android-Firestorm'
+	gitUrl = 'https://github.com/jakubkinst/Android-Firestorm'
+
+	libraryVersion = GIT_TAG_NAME
+
+	developerId = 'jakubkinst'
+	developerName = 'Jakub Kinst'
+	developerEmail = 'jakub@kinst.cz'
+
+	licenseName = 'The Apache Software License, Version 2.0'
+	licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+	allLicenses = ["Apache-2.0"]
+}
+
+android {
+	compileSdkVersion 25
+	buildToolsVersion "25.0.2"
+
+	defaultConfig {
+		minSdkVersion 14
+		targetSdkVersion 25
+		versionCode 1
+		versionName libraryVersion
+	}
+	buildTypes {
+		release {
+			minifyEnabled false
+			proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+		}
+	}
+	dataBinding.enabled = true;
+	lintOptions {
+		abortOnError false
+	}
+	compileOptions {
+		sourceCompatibility JavaVersion.VERSION_1_8
+		targetCompatibility JavaVersion.VERSION_1_8
+	}
+}
+
+dependencies {
+	compile fileTree(dir: 'libs', include: ['*.jar'])
+	testCompile 'junit:junit:4.12'
+	compile 'com.android.support:appcompat-v7:25.2.0'
+
+	compile "com.google.firebase:firebase-core:10.2.0"
+	compile "com.google.firebase:firebase-database:10.2.0"
+}
+
+apply from: '../publish.gradle'
+

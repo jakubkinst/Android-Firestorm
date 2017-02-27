@@ -1,0 +1,7 @@
+<resources>
+	<string name="app_name">Firestorm</string>
+	<string name="add_title">Add ToDo</string>
+	<string name="add_hint">What should I do?</string>
+	<string name="add">Add</string>
+	<string name="cancel">Cancel</string>
+</resources>

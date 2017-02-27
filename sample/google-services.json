@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "698212792034",
+    "firebase_url": "https://firestorm-sample.firebaseio.com",
+    "project_id": "firestorm-sample",
+    "storage_bucket": "firestorm-sample.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:698212792034:android:7ca339900c9a1784",
+        "android_client_info": {
+          "package_name": "cz.kinst.jakub.sample.firestorm"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "698212792034-71nkmv54mck8j3u0ngsgdvesb60d0fsq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrfPl4ntJfmASN0xIozVPWc3gciKZqGys"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,41 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android" xmlns:tools="http://schemas.android.com/tools">
+
+	<data>
+
+		<variable
+			name="viewModel"
+			type="cz.kinst.jakub.sample.firestorm.ToDoItemViewModel" />
+	</data>
+
+	<LinearLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:padding="@dimen/spacing_16"
+		android:orientation="horizontal">
+
+		<CheckBox
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginRight="@dimen/spacing_16"
+			android:checked="@{viewModel.item.checked}"
+			android:onCheckedChanged="@{(view, checked) -> viewModel.onCheckedChanged(checked)}" />
+		<TextView
+			android:layout_width="0dp"
+			android:layout_height="wrap_content"
+			android:layout_weight="1"
+			android:layout_gravity="center"
+			android:textAppearance="@style/TextAppearance.AppCompat.Title"
+			android:text="@{viewModel.item.title}"
+			tools:text="Title" />
+		<ImageView
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:layout_gravity="center"
+			android:layout_marginLeft="@dimen/spacing_16"
+			android:src="@drawable/ic_remove"
+			android:tint="@color/colorAccent"
+			android:foreground="?selectableItemBackgroundBorderless"
+			android:onClick="@{() -> viewModel.remove()}" />
+	</LinearLayout>
+</layout>
