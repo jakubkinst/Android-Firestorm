@@ -4,7 +4,7 @@
 ## Installation
 
 ```groovy
-compile 'cz.kinst.jakub:android-firestorm:0.8'
+compile 'cz.kinst.jakub:firestorm:0.8'
 ```
 
 ## License
