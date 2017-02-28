@@ -8,7 +8,7 @@ compile 'cz.kinst.jakub:firestorm:0.8'
 ```
 
 ## License
-    Copyright 2015 Jakub Kinst & Stepan Sanda
+    Copyright 2017 Jakub Kinst
     
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
@@ -21,3 +21,4 @@ compile 'cz.kinst.jakub:firestorm:0.8'
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
+    
